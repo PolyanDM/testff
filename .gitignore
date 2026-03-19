@@ -1,0 +1,19 @@
+# Виртуальное окружение
+venv/
+.env/
+
+# Кэш Python
+__pycache__/
+*.pyc
+.pytest_cache/
+
+# Папки с отчётами и скриншотами (создаются при локальном запуске)
+screenshots/
+test-results/
+report.html
+assets/
+
+# Файлы IDE
+.idea/
+.vscode/
+*.swp
