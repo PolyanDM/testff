@@ -30,4 +30,14 @@ jobs:
 
     - name: Run tests
       run: |
-        pytest --html=report.html --self-contained-html
+        pytest --html=report.html --self-contained-html -v
+
+    - name: Upload test results
+      uses: actions/upload-artifact@v4
+      if: always()
+      with:
+        name: test-results-${{ github.run_id }}
+        path: |
+          report.html
+          screenshots/
+          test-results/
